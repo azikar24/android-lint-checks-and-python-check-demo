@@ -22,3 +22,11 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task runPython(type: Exec) {
+    println("Hello python")
+    exec(){
+        workingDir './pyScript'
+        commandLine "python3", "main.py"
+    }
+}
